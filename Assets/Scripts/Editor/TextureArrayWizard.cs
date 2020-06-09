@@ -17,7 +17,6 @@ using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
-using DaggerfallWorkshop.Utility;
 
 namespace DaggerfallWorkshop
 {
@@ -138,18 +137,18 @@ namespace DaggerfallWorkshop
 
             layers.Sort((a, b) =>
             {
-                int value = a.Second.archive - b.Second.archive;
+                int value = a.Item2.archive - b.Item2.archive;
                 if (value == 0)
                 {
-                    value = a.Second.record - b.Second.record;
+                    value = a.Item2.record - b.Item2.record;
                     if (value == 0)
-                        value = a.Second.frame - b.Second.frame;
+                        value = a.Item2.frame - b.Item2.frame;
                 }
 
                 return value;
             });
 
-            SetTextures(layers.Select(x => x.First));
+            SetTextures(layers.Select(x => x.Item1));
         }
 
         void OnWizardUpdate()

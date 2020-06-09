@@ -13,7 +13,6 @@ using System;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
-using DaggerfallWorkshop.Utility;
 
 namespace DaggerfallWorkshop.Game.Utility.ModSupport.ModSettings
 {
